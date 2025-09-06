@@ -3,79 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>$RIPTRUMP • Meme Coin</title>
-  <meta name="description" content="$RIPTRUMP — a parody/satire meme coin inspired by the internet 'is he dead?' rumor cycle. Not financial advice. Not affiliated with any person, company, or news network." />
-  <meta property="og:title" content="$RIPTRUMP — Meme Coin" />
-  <meta property="og:description" content="Parody coin, news‑style site, telegram + twitter links, whitepaper, and pump.fun link." />
+  <title>$RIPTRUMP • Parody Meme Coin</title>
+  <meta name="description" content="$RIPTRUMP is a parody/satire meme coin riffing on the never-ending internet rumor cycle. Entertainment only; not financial advice; not affiliated with any person or network." />
+
+  <!-- Open Graph / Twitter preview -->
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="$RIPTRUMP — Parody Meme Coin" />
+  <meta property="og:description" content="FAUX NEWS–style site, live SOL price, tokenomics, whitepaper, and official links. Entertainment only." />
+  <meta property="og:image" content="https://i.ibb.co/R4JZmJng/photo-2025-09-06-14-40-45.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="$RIPTRUMP — Parody Meme Coin" />
+  <meta name="twitter:description" content="FAUX NEWS–style site, live SOL price, tokenomics, whitepaper, links." />
+  <meta name="twitter:image" content="https://i.ibb.co/R4JZmJng/photo-2025-09-06-14-40-45.jpg" />
+  <link rel="icon" href="https://i.ibb.co/R4JZmJng/photo-2025-09-06-14-40-45.jpg" />
   <meta name="color-scheme" content="dark light">
+
   <style>
     :root{
-      --bg:#0b0c10;--card:#121319;--ink:#e6ecf3;--muted:#9fb0c2;--accent:#ffc83d;--good:#28d17c;--bad:#ff5a7a;--brand:#5db0ff;
-      --max:1100px;--radius:18px;--shadow:0 10px 30px rgba(0,0,0,.25);
+      --bg:#0b0c10;--card:#121319;--ink:#eaf0f7;--muted:#9fb0c2;
+      --accent:#ffc83d;--good:#28d17c;--bad:#ff5a7a;--brand:#5db0ff;
+      --line:#1b1f2a;--fade:rgba(0,0,0,.25);--radius:18px;--max:1200px
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(10,12,18,.9),rgba(10,12,18,.6));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid #1b1f2a}
-    .wrap{max-width:var(--max);margin:auto;padding:18px}
-    .row{display:flex;gap:14px;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.4px}
-    .brand svg{width:30px;height:30px}
-    .pillbar{display:flex;gap:8px;flex-wrap:wrap}
-    .pill{background:#1a2130;border:1px solid #242b3a;color:var(--muted);padding:7px 10px;border-radius:999px;font-size:12px}
+    html,body{margin:0;height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:auto;padding:clamp(14px,2vw,20px)}
 
-    .hero{padding:40px 18px 10px}
-    .hero-grid{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
-    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid #1b1f2a;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .pad{padding:22px}
-    .title{font-size:clamp(26px,4vw,40px);line-height:1.08;margin:0 0 8px}
+    header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(10,12,18,.95),rgba(10,12,18,.6));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line)}
+    .row{display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.3px}
+    .brand img{width:32px;height:32px;border-radius:6px;object-fit:cover}
+    .nav{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{background:#182031;border:1px solid #242c3b;color:var(--muted);padding:7px 12px;border-radius:999px;font-size:12px}
+
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 30px var(--fade)}
+    .pad{padding:clamp(16px,2vw,22px)}
+
+    h1.title{font-size:clamp(28px,4.2vw,44px);line-height:1.05;margin:0 0 6px}
     .sub{color:var(--muted);margin:6px 0 14px}
     .cta{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{background:var(--brand);color:#051120;font-weight:700;padding:12px 16px;border-radius:12px;border:none;cursor:pointer}
+    .btn{background:var(--brand);color:#071220;font-weight:800;padding:12px 16px;border-radius:12px;border:none;display:inline-flex;align-items:center;gap:8px}
     .btn.alt{background:#212a3a;color:var(--ink);border:1px solid #2a3448}
-    .ticker{display:flex;gap:10px;overflow:auto;padding:10px;border-top:1px solid #212432;border-bottom:1px solid #212432}
-    .tick{white-space:nowrap;background:#0f141f;border:1px solid #1b2436;border-radius:999px;padding:6px 12px;font-size:12px}
 
-    .news{max-width:var(--max);margin:24px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    @media (max-width:900px){.news{grid-template-columns:1fr 1fr}}
+    /* News ticker */
+    .ticker-wrap{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0d131f}
+    .ticker{display:flex;gap:24px;white-space:nowrap;animation:scroll 40s linear infinite;padding:10px 0}
+    .tag{background:#0f1626;border:1px solid #1b2436;border-radius:999px;padding:6px 12px;font-size:12px;color:var(--muted)}
+    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* Faux live news grid */
+    .news{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:980px){.news{grid-template-columns:1fr 1fr}}
     @media (max-width:640px){.news{grid-template-columns:1fr}}
-    .headline{padding:18px;border-left:4px solid var(--accent)}
-    .headline h3{margin:0 0 6px;font-size:18px}
+    .headline{padding:18px;border-left:4px solid var(--accent);display:grid;gap:6px}
+    .headline h3{margin:0;font-size:18px}
     .meta{color:var(--muted);font-size:12px}
+    .source{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}
+    .source img{width:18px;height:18px;border-radius:4px;object-fit:cover;opacity:.9}
 
-    .two{max-width:var(--max);margin:28px auto;display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media (max-width:900px){.two{grid-template-columns:1fr}}
+    /* Tokenomics + How */
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:980px){.two{grid-template-columns:1fr}}
     .list li{margin:8px 0}
-
     .tokenomics table{width:100%;border-collapse:collapse}
     .tokenomics th,.tokenomics td{border-bottom:1px solid #1e2230;padding:10px;text-align:left}
 
-    details{background:#0f141e;border:1px solid #1d2331;border-radius:14px;padding:16px}
+    /* Whitepaper */
+    details{background:#0f141e;border:1px solid #1d2331;border-radius:14px;padding:0}
     details[open]{border-color:#2b3956}
-    summary{cursor:pointer;font-weight:800}
+    summary{cursor:pointer;font-weight:900;padding:16px 18px}
+    .wp-body{padding:0 18px 18px}
+    .wp-body h3{margin:16px 0 6px}
 
-    footer{border-top:1px solid #1b1f2a;margin-top:30px}
+    footer{border-top:1px solid var(--line);margin-top:30px}
     .fine{color:var(--muted);font-size:12px}
-    .bad{color:var(--bad)}
-    .good{color:var(--good)}
+
+    /* SOL price chip */
+    .chip{display:inline-flex;align-items:center;gap:8px;background:#0e1624;border:1px solid #1b2436;border-radius:999px;padding:6px 10px}
+    .dot{width:8px;height:8px;border-radius:50%}
+    .up{background:var(--good)} .down{background:var(--bad)}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap row">
       <div class="brand" aria-label="$RIPTRUMP brand">
-        <!-- Simple SVG tombstone mark -->
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="8" y="24" width="48" height="32" rx="6" fill="#2c3243"/>
-          <path d="M16 24a16 16 0 0132 0v1H16z" fill="#3a4258"/>
-          <text x="32" y="48" text-anchor="middle" font-size="13" font-weight="800" fill="#ffc83d">$RIPT</text>
-        </svg>
+        <img src="https://i.ibb.co/R4JZmJng/photo-2025-09-06-14-40-45.jpg" alt="$RIPTRUMP Logo" />
         <span>$RIPTRUMP</span>
       </div>
-      <nav class="pillbar">
+      <nav class="nav">
         <a class="pill" href="#news">News</a>
         <a class="pill" href="#how">How to Buy</a>
         <a class="pill" href="#tokenomics">Tokenomics</a>
@@ -85,127 +103,215 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-grid">
+  <main class="wrap">
+    <section class="grid">
       <div class="card pad">
-        <h1 class="title">“Rumors never die. They <span class="bad">pump</span>.”</h1>
-        <p class="sub">$RIPTRUMP is a <strong>parody / satire</strong> meme coin riffing on the never‑ending internet "is he dead?" rumor cycle. This site is news‑style for the laughs — not endorsements, not financial advice, and <strong>not affiliated</strong> with any person or network.</p>
+        <h1 class="title">“Rumors never die. They <span style="color:var(--bad)">pump</span>.”</h1>
+        <p class="sub">
+          $RIPTRUMP is a <strong>parody / satire</strong> meme coin riffing on the internet's cyclical "is he dead?" rumor trope.
+          We parody news aesthetics for laughs — this is entertainment only; <strong>not financial advice</strong>;
+          <strong>not affiliated</strong> with any person or network.
+        </p>
         <div class="cta">
           <a class="btn" href="https://riptrump.live" target="_blank" rel="noopener">riptrump.live ↗</a>
           <a class="btn alt" href="https://t.me/riptrumpump" target="_blank" rel="noopener">Telegram</a>
           <a class="btn alt" href="https://x.com/riptrump83551" target="_blank" rel="noopener">Twitter/X</a>
           <a class="btn" id="pumpfun" href="#" target="_blank" rel="noopener">Pump.fun ↗</a>
         </div>
-        <p class="sub" style="margin-top:10px">Replace the Pump.fun link in the source (<code>id="pumpfun"</code>) with your live token URL when ready.</p>
-        <div class="ticker" role="feed" aria-label="satirical breaking news ticker">
-          <div class="tick">BREAKING: Sources confirm he’s still golfing ⛳</div>
-          <div class="tick">Analyst: “Rumors up, spirits up, charts… TBD.”</div>
-          <div class="tick">Community chant: STILL. HERE. STILL. PUMPING.</div>
-          <div class="tick">Parody only • Do your own research • Have fun</div>
+        <p class="sub" style="margin-top:8px">
+          Paste your contract & Pump.fun URL in the <code>CONFIG</code> below — links update automatically.
+        </p>
+        <div class="ticker-wrap" aria-label="satirical breaking news ticker">
+          <div class="ticker" id="ticker">
+            <span class="tag">BREAKING: Sources confirm he’s still golfing ⛳</span>
+            <span class="tag">Analyst: “Rumors up, spirits up, charts… TBD.”</span>
+            <span class="tag">Community chant: STILL. HERE. STILL. PUMPING.</span>
+            <span class="tag">Parody only • Do your own research • Have fun</span>
+            <!-- duplicate for seamless loop -->
+            <span class="tag">BREAKING: Sources confirm he’s still golfing ⛳</span>
+            <span class="tag">Analyst: “Rumors up, spirits up, charts… TBD.”</span>
+            <span class="tag">Community chant: STILL. HERE. STILL. PUMPING.</span>
+            <span class="tag">Parody only • Do your own research • Have fun</span>
+          </div>
         </div>
       </div>
-      <div class="card pad" id="stats">
+
+      <aside class="card pad" id="desk">
         <h2 style="margin:0 0 10px">Live-ish “News Desk”</h2>
-        <div class="sub">A faux news panel with quick facts.</div>
-        <div class="list">
-          <ul>
-            <li>Chain: <strong>Solana</strong></li>
-            <li>Ticker: <strong>$RIPT</strong> (site shorthand)</li>
-            <li>Slippage tip: <strong>0–2%</strong> (varies)</li>
-            <li>Liquidity: <strong>Community‑driven</strong></li>
-            <li>Contract: <code id="ca">ADD_CONTRACT_ADDRESS</code> <button class="btn alt" style="padding:6px 10px" onclick="copyCA()">Copy</button></li>
-          </ul>
+        <p class="sub">Quick stats, updated from public APIs.</p>
+        <div class="chip" title="Solana price in USD (from CoinGecko)">
+          <div id="solDot" class="dot"></div>
+          <strong>SOL</strong> <span id="solPrice">…</span>
         </div>
-        <script>
-          function copyCA(){
-            const t=document.getElementById('ca').textContent.trim();
-            navigator.clipboard.writeText(t).then(()=>{alert('Contract copied: '+t)})
-          }
-        </script>
-      </div>
-    </div>
-  </section>
-
-  <section id="news" class="news">
-    <article class="card headline">
-      <h3>FAUX NEWS: Anonymous aide reports “He’s simply napping.”</h3>
-      <div class="meta">Satire • Internet rumors be like…</div>
-    </article>
-    <article class="card headline">
-      <h3>Markets react to rumors: $RIPTRUMP trending in meme land.</h3>
-      <div class="meta">Community • No promises. No utility except fun.</div>
-    </article>
-    <article class="card headline">
-      <h3>Technical analysis: Draw a line. Believe in the line.</h3>
-      <div class="meta">Entertainment only • Not financial advice.</div>
-    </article>
-  </section>
-
-  <section id="how" class="two">
-    <div class="card pad">
-      <h2>How to Buy (Solana)</h2>
-      <ol class="list">
-        <li>Get a wallet (Phantom, Solflare).</li>
-        <li>Fund with SOL.</li>
-        <li>Open the Pump.fun link above and connect.</li>
-        <li>Set slippage if needed, confirm the swap.</li>
-        <li>Celebrate responsibly and meme respectfully.</li>
-      </ol>
-      <p class="sub">Always double‑check contract addresses. Beware of imposters.</p>
-    </div>
-    <div class="card pad tokenomics" id="tokenomics">
-      <h2>Tokenomics (Parody‑friendly)</h2>
-      <table>
-        <tr><th>Total Supply</th><td>1,000,000,000 $RIPTRUMP</td></tr>
-        <tr><th>Taxes</th><td>0 / 0 — Let the memes flow</td></tr>
-        <tr><th>Liquidity</th><td>Auto via Pump.fun • Community vibes</td></tr>
-        <tr><th>Utility</th><td>Meme, culture, and collective giggles</td></tr>
-      </table>
-      <p class="sub">This is a joke coin. Don’t spend what you can’t afford to lose.</p>
-    </div>
-  </section>
-
-  <section id="whitepaper" class="wrap">
-    <details>
-      <summary>📄 $RIPTRUMP Whitepaper (Parody)</summary>
-      <div class="pad" style="padding-left:0">
-        <h3>1. Vision</h3>
-        <p>$RIPTRUMP is a commentary on how rumor cycles never die. We turn the meme into a collectible token to share laughs, not promises.</p>
-        <h3>2. Fair Launch</h3>
-        <ul class="list">
-          <li>No presale. No team allocation. No roadmap that pretends to cure boredom.</li>
-          <li>Launch via Pump.fun; liquidity automatically handled per platform rules.</li>
+        <ul class="list" style="margin-top:14px">
+          <li>Chain: <strong>Solana</strong></li>
+          <li>Ticker (site shorthand): <strong>$RIPT</strong></li>
+          <li>Slippage tip: <strong>0–2%</strong> (varies)</li>
+          <li>Liquidity: <strong>Community-driven</strong></li>
+          <li>Contract: <code id="ca">ADD_CONTRACT_ADDRESS</code>
+            <button class="btn alt" style="padding:6px 10px" onclick="copyCA()">Copy</button>
+          </li>
         </ul>
-        <h3>3. Culture Flywheel</h3>
-        <ul class="list">
-          <li>Community‑made memes (PG‑13 preferred), contests, and sticker packs.</li>
-          <li>Satirical “news desk” spaces on Telegram & Twitter.</li>
-        </ul>
-        <h3>4. Risks</h3>
-        <p>Markets are volatile. Tokens can go to zero. This is entertainment, not investment advice. We do not impersonate, endorse, or defame real people. Parody only.</p>
-        <h3>5. Legal/Content Note</h3>
-        <p>This site intentionally avoids real-news trademarks/logos. "FAUX NEWS" styling is used to parody news aesthetics without affiliation.</p>
-      </div>
-    </details>
-  </section>
+      </aside>
+    </section>
 
-  <section id="links" class="wrap" style="margin-top:20px">
-    <div class="card pad">
-      <h2>Official Links</h2>
-      <ul class="list">
-        <li>Website: <a href="https://riptrump.live" target="_blank" rel="noopener">riptrump.live</a></li>
-        <li>Telegram: <a href="https://t.me/riptrumpump" target="_blank" rel="noopener">t.me/riptrumpump</a></li>
-        <li>Twitter/X: <a href="https://x.com/riptrump83551" target="_blank" rel="noopener">@riptrump83551</a></li>
-        <li>Pump.fun: <a href="#" id="pumpfun2" target="_blank" rel="noopener">(add your token link)</a></li>
-      </ul>
-    </div>
-  </section>
+    <section id="news" class="news" style="margin-top:18px">
+      <article class="card headline">
+        <div class="source"><img src="https://i.ibb.co/R4JZmJng/photo-2025-09-06-14-40-45.jpg" alt="logo" /> FAUX NEWS • Satire</div>
+        <h3>Anonymous aide reports “He’s simply napping.”</h3>
+        <div class="meta">Internet rumors be like…</div>
+      </article>
+      <article class="card headline">
+        <div class="source"><img src="https://i.ibb.co/R4JZmJng/photo-2025-09-06-14-40-45.jpg" alt="logo" /> Community • Vibes</div>
+        <h3>Markets react to rumors: $RIPTRUMP trends in meme land.</h3>
+        <div class="meta">No promises. No utility except fun.</div>
+      </article>
+      <article class="card headline">
+        <div class="source"><img src="https://i.ibb.co/R4JZmJng/photo-2025-09-06-14-40-45.jpg" alt="logo" /> TA • Entertainment</div>
+        <h3>Technical analysis: Draw a line. Believe in the line.</h3>
+        <div class="meta">Entertainment only • Not financial advice.</div>
+      </article>
+    </section>
+
+    <section id="how" class="two" style="margin-top:22px">
+      <div class="card pad">
+        <h2>How to Buy (Solana)</h2>
+        <ol class="list">
+          <li>Get a wallet (Phantom, Solflare).</li>
+          <li>Fund with SOL.</li>
+          <li>Open the Pump.fun link and connect.</li>
+          <li>Set slippage if needed, confirm the swap.</li>
+          <li>Celebrate responsibly and meme respectfully.</li>
+        </ol>
+        <p class="sub">Always double-check contract addresses. Beware of imposters.</p>
+      </div>
+      <div class="card pad tokenomics" id="tokenomics">
+        <h2>Tokenomics</h2>
+        <table>
+          <tr><th>Total Supply</th><td>1,000,000,000 $RIPTRUMP</td></tr>
+          <tr><th>Taxes</th><td>0 / 0 — Let the memes flow</td></tr>
+          <tr><th>Liquidity</th><td>Auto via Pump.fun • Community vibes</td></tr>
+          <tr><th>Utility</th><td>Meme, culture, and collective giggles</td></tr>
+        </table>
+        <p class="sub">This is a joke coin. Don’t spend what you can’t afford to lose.</p>
+      </div>
+    </section>
+
+    <section id="whitepaper" class="wrap" style="padding-left:0;padding-right:0;margin-top:22px">
+      <details>
+        <summary>📄 $RIPTRUMP Whitepaper (Parody)</summary>
+        <div class="wp-body">
+          <h3>1. Vision</h3>
+          <p>$RIPTRUMP celebrates the internet’s tendency to turn rumors into culture. We mint that energy into a collectible token for laughs and community. No promises, no profits implied, no affiliation with any public figure.</p>
+
+          <h3>2. Launch & Fairness</h3>
+          <ul class="list">
+            <li>Launch Platform: Pump.fun on <strong>Solana</strong>.</li>
+            <li>No presale. No team allocation. No hidden mints.</li>
+            <li>Liquidity: Handled per Pump.fun mechanics; community-driven thereafter.</li>
+          </ul>
+
+          <h3>3. Token Economics</h3>
+          <ul class="list">
+            <li>Total Supply: 1,000,000,000.</li>
+            <li>Taxes/Fees: 0/0 at launch for simple trading.</li>
+            <li>Utility: Cultural participation, memes, contests, sticker packs.</li>
+          </ul>
+
+          <h3>4. Culture Flywheel</h3>
+          <ul class="list">
+            <li>FAUX NEWS spaces on Telegram/Twitter to recap community gags.</li>
+            <li>Creator bounties for GIFs, edits, and templates.</li>
+            <li>Open-source meme kit: logos, SVGs, brand colors.</li>
+          </ul>
+
+          <h3>5. Governance</h3>
+          <p>No formal DAO at launch. If the community requests it, a lightweight vote system for meme contests may be introduced later with simple snapshot-style polls.</p>
+
+          <h3>6. Risks</h3>
+          <p>Crypto is volatile. Tokens can go to zero. Smart contracts can fail. Never invest more than you can afford to lose. Entertainment only.</p>
+
+          <h3>7. Legal/Content Note</h3>
+          <p>This is a <strong>parody</strong> project. We avoid real-news logos and trademarks; the site uses “FAUX NEWS” styling to clearly parody news aesthetics. We do not impersonate or defame any person.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="links" style="margin-top:22px">
+      <div class="card pad">
+        <h2>Official Links</h2>
+        <ul class="list">
+          <li>Website: <a href="https://riptrump.live" target="_blank" rel="noopener">riptrump.live</a></li>
+          <li>Telegram: <a href="https://t.me/riptrumpump" target="_blank" rel="noopener">t.me/riptrumpump</a></li>
+          <li>Twitter/X: <a href="https://x.com/riptrump83551" target="_blank" rel="noopener">@riptrump83551</a></li>
+          <li>Pump.fun: <a href="#" id="pumpfun2" target="_blank" rel="noopener">(add your token link)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="wrap">
       <p class="fine">© <span id="y"></span> $RIPTRUMP — Parody / Satire Project. Not affiliated with any individual, organization, or news network. Not financial advice.</p>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script>
+    /* =========================
+       QUICK CONFIG — EDIT THESE
+       ========================= */
+    const CONFIG = {
+      CONTRACT: "ADD_CONTRACT_ADDRESS_HERE",
+      PUMPFUN_URL: "https://pump.fun/ADD_YOUR_TOKEN_URL"
+    };
+
+    // Apply config
+    (function applyConfig(){
+      // Contract
+      const caEl = document.getElementById('ca');
+      if (caEl && CONFIG.CONTRACT) caEl.textContent = CONFIG.CONTRACT;
+
+      // Pump.fun buttons/links
+      const pf1 = document.getElementById('pumpfun');
+      const pf2 = document.getElementById('pumpfun2');
+      [pf1, pf2].forEach(a => {
+        if (a && CONFIG.PUMPFUN_URL) {
+          a.href = CONFIG.PUMPFUN_URL;
+          a.textContent = a.id === 'pumpfun2' ? CONFIG.PUMPFUN_URL : 'Pump.fun ↗';
+        }
+      });
+    })();
+
+    // Live SOL price via CoinGecko (no API key)
+    let lastPrice = null;
+    async function fetchSOL(){
+      try{
+        const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd', {cache:'no-store'});
+        const j = await r.json();
+        const p = j.solana?.usd;
+        if(typeof p === 'number'){
+          const el = document.getElementById('solPrice');
+          const dot = document.getElementById('solDot');
+          if(lastPrice!==null){ dot.className = 'dot ' + (p>=lastPrice ? 'up' : 'down'); }
+          el.textContent = '$' + p.toLocaleString(undefined,{minimumFractionDigits:2, maximumFractionDigits:2});
+          lastPrice = p;
+        }
+      }catch(e){
+        document.getElementById('solPrice').textContent = 'unavailable';
+      }
+    }
+    fetchSOL();
+    setInterval(fetchSOL, 30000);
+
+    function copyCA(){
+      const t=document.getElementById('ca').textContent.trim();
+      if(!t || /ADD_CONTRACT_ADDRESS/i.test(t)){
+        alert('Please set your contract in CONFIG.CONTRACT first.'); return;
+      }
+      navigator.clipboard.writeText(t).then(()=>{alert('Contract copied: '+t)});
+    }
+
+    document.getElementById('y').textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>
