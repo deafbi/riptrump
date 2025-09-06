@@ -6,7 +6,7 @@
   <title>$RIPTRUMP • Parody Meme Coin</title>
   <meta name="description" content="$RIPTRUMP is a parody/satire meme coin riffing on the never-ending internet rumor cycle. Entertainment only; not financial advice; not affiliated with any person or network." />
 
-  <!-- Open Graph / Twitter preview -->
+  <!-- Social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="$RIPTRUMP — Parody Meme Coin" />
   <meta property="og:description" content="FAUX NEWS–style site, live SOL price, tokenomics, whitepaper, and official links. Entertainment only." />
@@ -22,48 +22,57 @@
     :root{
       --bg:#0b0c10;--card:#121319;--ink:#eaf0f7;--muted:#9fb0c2;
       --accent:#ffc83d;--good:#28d17c;--bad:#ff5a7a;--brand:#5db0ff;
-      --line:#1b1f2a;--fade:rgba(0,0,0,.25);--radius:18px;--max:1200px
+      --line:#1b1f2a;--fade:rgba(0,0,0,.25);--radius:18px;--max:1100px
     }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
     a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max);margin:auto;padding:clamp(14px,2vw,20px)}
+    .wrap{max-width:var(--max);margin:auto;padding:clamp(14px,2vw,18px)}
 
-    header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(10,12,18,.95),rgba(10,12,18,.6));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line)}
+    header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(10,12,18,.95),rgba(10,12,18,.65));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line)}
     .row{display:flex;gap:14px;align-items:center;justify-content:space-between}
     .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.3px}
-    .brand img{width:32px;height:32px;border-radius:6px;object-fit:cover}
+    .brand img{width:30px;height:30px;border-radius:6px;object-fit:cover}
     .nav{display:flex;gap:8px;flex-wrap:wrap}
     .pill{background:#182031;border:1px solid #242c3b;color:var(--muted);padding:7px 12px;border-radius:999px;font-size:12px}
 
-    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-    @media (max-width:980px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 30px var(--fade)}
-    .pad{padding:clamp(16px,2vw,22px)}
+    /* Cards */
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 24px var(--fade)}
+    .pad{padding:clamp(14px,2vw,18px)}
 
-    h1.title{font-size:clamp(28px,4.2vw,44px);line-height:1.05;margin:0 0 6px}
-    .sub{color:var(--muted);margin:6px 0 14px}
+    /* Hero is now single column and tighter */
+    .hero{padding-block:18px}
+    .hero .title{font-size:clamp(24px,4vw,38px);line-height:1.08;margin:0 0 8px}
+    .sub{color:var(--muted);margin:6px 0 12px}
     .cta{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{background:var(--brand);color:#071220;font-weight:800;padding:12px 16px;border-radius:12px;border:none;display:inline-flex;align-items:center;gap:8px}
+    .btn{background:var(--brand);color:#071220;font-weight:800;padding:10px 14px;border-radius:12px;border:none;display:inline-flex;align-items:center;gap:8px}
     .btn.alt{background:#212a3a;color:var(--ink);border:1px solid #2a3448}
 
-    /* News ticker */
-    .ticker-wrap{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0d131f}
-    .ticker{display:flex;gap:24px;white-space:nowrap;animation:scroll 40s linear infinite;padding:10px 0}
-    .tag{background:#0f1626;border:1px solid #1b2436;border-radius:999px;padding:6px 12px;font-size:12px;color:var(--muted)}
+    /* Ticker */
+    .ticker-wrap{position:relative;overflow:hidden;border:1px solid var(--line);background:#0d131f;border-radius:12px;margin-top:10px}
+    .ticker{display:flex;gap:18px;white-space:nowrap;animation:scroll 36s linear infinite;padding:8px 12px}
+    .tag{background:#0f1626;border:1px solid #1b2436;border-radius:999px;padding:6px 10px;font-size:12px;color:var(--muted)}
     @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    /* Faux live news grid */
+    /* News Desk (own section) */
+    .desk{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:#0e1624;border:1px solid #1b2436;border-radius:999px;padding:6px 10px}
+    .dot{width:8px;height:8px;border-radius:50%}
+    .up{background:var(--good)} .down{background:var(--bad)}
+    .kv{display:flex;gap:12px;flex-wrap:wrap}
+    .kv div{background:#0f1624;border:1px solid #1b2436;border-radius:10px;padding:8px 10px;color:var(--muted);font-size:12px}
+
+    /* Headlines grid */
     .news{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media (max-width:980px){.news{grid-template-columns:1fr 1fr}}
     @media (max-width:640px){.news{grid-template-columns:1fr}}
-    .headline{padding:18px;border-left:4px solid var(--accent);display:grid;gap:6px}
+    .headline{padding:16px;border-left:4px solid var(--accent);display:grid;gap:6px}
     .headline h3{margin:0;font-size:18px}
     .meta{color:var(--muted);font-size:12px}
     .source{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}
     .source img{width:18px;height:18px;border-radius:4px;object-fit:cover;opacity:.9}
 
-    /* Tokenomics + How */
+    /* Two-column section */
     .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     @media (max-width:980px){.two{grid-template-columns:1fr}}
     .list li{margin:8px 0}
@@ -73,17 +82,12 @@
     /* Whitepaper */
     details{background:#0f141e;border:1px solid #1d2331;border-radius:14px;padding:0}
     details[open]{border-color:#2b3956}
-    summary{cursor:pointer;font-weight:900;padding:16px 18px}
-    .wp-body{padding:0 18px 18px}
-    .wp-body h3{margin:16px 0 6px}
+    summary{cursor:pointer;font-weight:900;padding:14px 16px}
+    .wp-body{padding:0 16px 16px}
+    .wp-body h3{margin:14px 0 6px}
 
-    footer{border-top:1px solid var(--line);margin-top:30px}
+    footer{border-top:1px solid var(--line);margin-top:26px}
     .fine{color:var(--muted);font-size:12px}
-
-    /* SOL price chip */
-    .chip{display:inline-flex;align-items:center;gap:8px;background:#0e1624;border:1px solid #1b2436;border-radius:999px;padding:6px 10px}
-    .dot{width:8px;height:8px;border-radius:50%}
-    .up{background:var(--good)} .down{background:var(--bad)}
   </style>
 </head>
 <body>
@@ -104,58 +108,57 @@
   </header>
 
   <main class="wrap">
-    <section class="grid">
-      <div class="card pad">
-        <h1 class="title">“Rumors never die. They <span style="color:var(--bad)">pump</span>.”</h1>
-        <p class="sub">
-          $RIPTRUMP is a <strong>parody / satire</strong> meme coin riffing on the internet's cyclical "is he dead?" rumor trope.
-          We parody news aesthetics for laughs — this is entertainment only; <strong>not financial advice</strong>;
-          <strong>not affiliated</strong> with any person or network.
-        </p>
-        <div class="cta">
-          <a class="btn" href="https://riptrump.live" target="_blank" rel="noopener">riptrump.live ↗</a>
-          <a class="btn alt" href="https://t.me/riptrumpump" target="_blank" rel="noopener">Telegram</a>
-          <a class="btn alt" href="https://x.com/riptrump83551" target="_blank" rel="noopener">Twitter/X</a>
-          <a class="btn" id="pumpfun" href="#" target="_blank" rel="noopener">Pump.fun ↗</a>
-        </div>
-        <p class="sub" style="margin-top:8px">
-          Paste your contract & Pump.fun URL in the <code>CONFIG</code> below — links update automatically.
-        </p>
-        <div class="ticker-wrap" aria-label="satirical breaking news ticker">
-          <div class="ticker" id="ticker">
-            <span class="tag">BREAKING: Sources confirm he’s still golfing ⛳</span>
-            <span class="tag">Analyst: “Rumors up, spirits up, charts… TBD.”</span>
-            <span class="tag">Community chant: STILL. HERE. STILL. PUMPING.</span>
-            <span class="tag">Parody only • Do your own research • Have fun</span>
-            <!-- duplicate for seamless loop -->
-            <span class="tag">BREAKING: Sources confirm he’s still golfing ⛳</span>
-            <span class="tag">Analyst: “Rumors up, spirits up, charts… TBD.”</span>
-            <span class="tag">Community chant: STILL. HERE. STILL. PUMPING.</span>
-            <span class="tag">Parody only • Do your own research • Have fun</span>
-          </div>
+    <!-- HERO -->
+    <section class="hero card pad">
+      <h1 class="title">“Rumors never die. They <span style="color:var(--bad)">pump</span>.”</h1>
+      <p class="sub">
+        $RIPTRUMP is a <strong>parody / satire</strong> meme coin riffing on the internet's cyclical "is he dead?" rumor trope.
+        This is entertainment only; <strong>not financial advice</strong>; <strong>not affiliated</strong> with any person or network.
+      </p>
+      <div class="cta">
+        <a class="btn" href="https://riptrump.live" target="_blank" rel="noopener">riptrump.live ↗</a>
+        <a class="btn alt" href="https://t.me/riptrumpump" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn alt" href="https://x.com/riptrump83551" target="_blank" rel="noopener">Twitter/X</a>
+        <a class="btn" id="pumpfun" href="#" target="_blank" rel="noopener">Pump.fun ↗</a>
+      </div>
+      <p class="sub" style="margin-top:6px">
+        Paste your contract & Pump.fun URL in <code>CONFIG</code> — links update automatically.
+      </p>
+
+      <div class="ticker-wrap" aria-label="satirical breaking news ticker">
+        <div class="ticker">
+          <span class="tag">BREAKING: Sources confirm he’s still golfing ⛳</span>
+          <span class="tag">Analyst: “Rumors up, spirits up, charts… TBD.”</span>
+          <span class="tag">Community chant: STILL. HERE. STILL. PUMPING.</span>
+          <span class="tag">Parody only • Do your own research • Have fun</span>
+          <span class="tag">BREAKING: Sources confirm he’s still golfing ⛳</span>
+          <span class="tag">Analyst: “Rumors up, spirits up, charts… TBD.”</span>
+          <span class="tag">Community chant: STILL. HERE. STILL. PUMPING.</span>
+          <span class="tag">Parody only • Do your own research • Have fun</span>
         </div>
       </div>
+    </section>
 
-      <aside class="card pad" id="desk">
-        <h2 style="margin:0 0 10px">Live-ish “News Desk”</h2>
-        <p class="sub">Quick stats, updated from public APIs.</p>
+    <!-- NEWS DESK (OWN SECTION) -->
+    <section class="card pad" style="margin-top:12px">
+      <div class="desk">
+        <h2 style="margin:0">Live-ish “News Desk”</h2>
         <div class="chip" title="Solana price in USD (from CoinGecko)">
           <div id="solDot" class="dot"></div>
           <strong>SOL</strong> <span id="solPrice">…</span>
         </div>
-        <ul class="list" style="margin-top:14px">
-          <li>Chain: <strong>Solana</strong></li>
-          <li>Ticker (site shorthand): <strong>$RIPT</strong></li>
-          <li>Slippage tip: <strong>0–2%</strong> (varies)</li>
-          <li>Liquidity: <strong>Community-driven</strong></li>
-          <li>Contract: <code id="ca">ADD_CONTRACT_ADDRESS</code>
-            <button class="btn alt" style="padding:6px 10px" onclick="copyCA()">Copy</button>
-          </li>
-        </ul>
-      </aside>
+      </div>
+      <div class="kv" style="margin-top:12px">
+        <div>Chain: <strong>Solana</strong></div>
+        <div>Ticker: <strong>$RIPT</strong></div>
+        <div>Slippage tip: <strong>0–2%</strong></div>
+        <div>Liquidity: <strong>Community-driven</strong></div>
+        <div>Contract: <code id="ca">ADD_CONTRACT_ADDRESS</code> <button class="btn alt" style="padding:6px 10px" onclick="copyCA()">Copy</button></div>
+      </div>
     </section>
 
-    <section id="news" class="news" style="margin-top:18px">
+    <!-- HEADLINES -->
+    <section id="news" class="news" style="margin-top:12px">
       <article class="card headline">
         <div class="source"><img src="https://i.ibb.co/R4JZmJng/photo-2025-09-06-14-40-45.jpg" alt="logo" /> FAUX NEWS • Satire</div>
         <h3>Anonymous aide reports “He’s simply napping.”</h3>
@@ -173,7 +176,8 @@
       </article>
     </section>
 
-    <section id="how" class="two" style="margin-top:22px">
+    <!-- HOW + TOKENOMICS -->
+    <section id="how" class="two" style="margin-top:14px">
       <div class="card pad">
         <h2>How to Buy (Solana)</h2>
         <ol class="list">
@@ -197,8 +201,9 @@
       </div>
     </section>
 
-    <section id="whitepaper" class="wrap" style="padding-left:0;padding-right:0;margin-top:22px">
-      <details>
+    <!-- WHITEPAPER -->
+    <section id="whitepaper" style="margin-top:14px">
+      <details class="card">
         <summary>📄 $RIPTRUMP Whitepaper (Parody)</summary>
         <div class="wp-body">
           <h3>1. Vision</h3>
@@ -237,7 +242,8 @@
       </details>
     </section>
 
-    <section id="links" style="margin-top:22px">
+    <!-- LINKS -->
+    <section id="links" style="margin-top:14px">
       <div class="card pad">
         <h2>Official Links</h2>
         <ul class="list">
@@ -267,11 +273,9 @@
 
     // Apply config
     (function applyConfig(){
-      // Contract
       const caEl = document.getElementById('ca');
       if (caEl && CONFIG.CONTRACT) caEl.textContent = CONFIG.CONTRACT;
 
-      // Pump.fun buttons/links
       const pf1 = document.getElementById('pumpfun');
       const pf2 = document.getElementById('pumpfun2');
       [pf1, pf2].forEach(a => {
@@ -286,7 +290,7 @@
     let lastPrice = null;
     async function fetchSOL(){
       try{
-        const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd', {cache:'no-store'});
+        const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd',{cache:'no-store'});
         const j = await r.json();
         const p = j.solana?.usd;
         if(typeof p === 'number'){
